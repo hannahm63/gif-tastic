@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <title>Gif-Tastic Animals</title>
@@ -31,24 +32,40 @@
 
         <!-- Row 2 : Topic Buttons -->
         <div class="row">
-            <div class="col-lg-12" id="btnSection">
+            <div class="col-lg-12" id="buttonDisplay">
 
             </div>
         </div>
 
         <!-- Row 3 : Gifs and Input -->
         <div class="row">
-            
+
             <!-- Column 1 : Gifs Displayed -->
-            <div class="col-lg-6">
-                <div class="card"></div>
+            <div class="col-lg-8" id="gifDisplay">
+
             </div>
 
             <!-- User Input -->
-            <div class="col-lg-6">
-                <div class="card card-body">
-                    <label for="themeInput">What type of gifs do you want to see?</label><br>
-                    <input type="text" name="" id="userInput" placeholder="Type your theme here!">
+            <div class="col-lg-4">
+                <div class="card">
+                    <form class="card-body">
+                        <div class="form-group">
+                            <label for="themeInput">What type of gifs do you want to see?</label>
+                            <input type="text" class="form-control" id="userInput" placeholder="Type your theme here!">
+                            <p>Once you click "Submit" watch for your theme to be added to the buttons at the top of the
+                                page!</p>
+                        </div>
+                        <div class="form-group">
+                            <label for="response-limit">How many gifs do you want to see?</label>
+                            <select class="form-control" id="userLimit">
+                                <option>3</option>
+                                <option>5</option>
+                                <option>7</option>
+                                <option selected>10</option>
+                            </select>
+                        </div>
+                        <button type="button" class="btn btn-outline-secondary" id="submit">Submit</button>
+                    </form>
                 </div>
             </div>
         </div>
